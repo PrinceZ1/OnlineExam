@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- {% load static %} -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo sửa kỳ thi</title>
+    <link rel="stylesheet" href="../css/quanlykythi.css">
+    <link rel="stylesheet" href="../css/quanlytaikhoan.css">
+    <link rel="stylesheet" href="/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+</head>
+
+<body>
+
+    <input type="checkbox" id="check">
+    <!--header area start-->
+    <header>
+        <label for="check">
+            <i style="left: 200px;margin-top: 5px;" class="fas fa-bars" id="sidebar_btn"></i>
+        </label>
+        <div class="left_area">
+            <h3>ADMIN</h3>
+        </div>
+        <div class="right_area">
+            <a href="/index.html" class="logout_btn">Đăng xuất</a>
+        </div>
+    </header>
+    <!--header area end-->
+    <!--sidebar start-->
+    <div class="sidebar">
+        <a href="TrangDashBoard.html"><i class="fa-solid fa-house-user"></i></i><span>Trang chủ</span></a>
+        <a href="QuanLyMonThi.html"><i class="fa-solid fa-list-check"></i></i><span>Quản lý Môn Thi</span></a>
+        <a href="QuanLyKyThi.html"class="active"><i class="fa-solid fa-list-check"></i></i><span>Quản lý Kỳ Thi</span></a>
+        <a href="QuanLyDeThi.html"><i class="fa-solid fa-list-check"></i></i><span>Quản lý Đề thi</span></a>
+        <a href="TrangKetQua.html"><i class="fas fa-book"></i><span>Kết quả thi </span></a>
+        <a href="TrangThongKe.html" ><i class="fas fa-chart-pie"></i><span>Thống kê</span></a>
+        <a href="QuanLyTaiKhoan.html"><i class="fa-solid fa-users"></i></i><span>Quản lý tài khoản</span></a>
+        <a href="/user/html/home.html"><i class="fa-solid fa-eye"></i><span>Xem trang web</span></a>
+      </div>
+
+    <!--sidebar end-->
+
+
+    <!--content start-->
+    <div class="content">
+        <br><br><br><br><br>
+        <!-- {% block content %}
+
+    {% endblock content %} -->
+
+            <h1>DANH SÁCH KỲ THI</h1>
+
+        <div class="show_exam">
+            <table id="statistics">
+                <thead>
+                    <tr>
+                        <th class="table-stt">STT</th> <!-- Số thứ tự(STT) -->
+                        <th>Tên kỳ thi</th>
+                        <th>Tổng số đề</th>
+                        <th>Số đề mở</th>
+                        <th>Số đề đóng</th>
+                        <th><i class="fa-solid fa-wrench"></i></th>
+                    </tr>
+                </thead>
+                <tbody id="statsBody"></tbody>
+            </table>
+        </div>
+
+        <div id="" class="">
+            <h3><b>Thêm kỳ thi mới</b></h3>
+            <form>
+                <label for="name">Tên kỳ thi:</label>
+                <input type="text" id="tenKyThi" name="tenKyThi" required>
+                <button class="btn" type="button" onclick="addKyThi()">Thêm</button>
+            </form>
+        </div>
+        <br><br>
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3>Sửa kỳ thi</h3>
+                <form id="updateMonThiForm">
+                    <label for="oldtenKyThi">Tên kỳ thi:</label>
+                    <input type="text" id="oldtenKyThi" name="tenKyThi" required>
+                    <button class="btn" id="saveChangesButton" onclick="saveChanges()">Lưu thay đổi</button>
+                </form>
+            </div>
+            
+        </div>
+
+        <br><br><br>
+        <!-- {% include "quiz/footer.html" %} -->
+    </div>
+    <!--content end-->
+    <script src="../js/quanlykythi.js"></script>
+    
+</body>
+
+</html>

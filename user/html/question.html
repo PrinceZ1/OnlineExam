@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài thi</title>
+    <link rel="stylesheet" href="../css/question.css">
+</head>
+<body>
+    <header>
+        <h1>Trắc nghiệm online PTIT</h1>
+    </header>
+
+    <nav>
+        <button onclick="goHome()">Trang chủ</button>
+        <button onclick="logout()">Đăng xuất</button>
+    </nav>
+    <div class="exam-container">
+        <div id="examInfo"></div>
+        <div id="examInfo_type"></div>
+        <div id="questions">
+            <div id="timer"> <b>Thời gian còn lại:</b><div id="countdown"></div></div>
+        </div>
+        
+        <button id="submit-btn" onclick="submitExam()">Nộp bài</button>
+    </div>
+    <footer>
+        <p> 2024 Trắc nghiệm online PTIT</p>
+    </footer>
+    <script src="../js/question.js"></script>
+</body>
+</html>

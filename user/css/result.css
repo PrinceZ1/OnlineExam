@@ -1,0 +1,139 @@
+
+
+/* CSS styles */
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+  background-color: #AD171C;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+footer {
+  background-color: #AD171C;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  margin-top: 100px;
+}
+nav {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between; /* Chia khoảng cách đều giữa hai phần tử */
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+nav button {
+  padding: 10px 20px;
+  background-color: #AD171C;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 1px 1px;
+  border-radius: 8px;
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+nav button:hover {
+  background-color: #ee060e;
+  transform: scale(1.1);
+}
+    /* -------------------- */
+#result-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#result-summary {
+    margin-bottom: 20px;
+}
+
+#result-summary p {
+    margin: 10px 0;
+}
+
+#view-result-detail-btn {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #AD171C;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 160px;
+}
+
+#view-result-detail-btn:hover {
+box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+#view-result-detail-btn:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+#result-details {
+    display: none; 
+    width: 100%;
+    
+}
+
+/* Định dạng cho kết quả chi tiết */
+.result-detail-item {
+    border: 1px solid #f5f5f5; /* Đặt viền cho div chứa câu hỏi */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 1px;
+    padding: 20px; /* Đặt khoảng cách giữa viền và nội dung bên trong */
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: rgb(208, 241, 201);
+    text-align: left;
+}
+
+.result-detail-question {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.result-detail-answer {
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/* CSS mới để bôi đỏ các mục có câu trả lời sai */
+.wrong-answer {
+    color: red; /* Màu chữ đỏ */
+}
+
+.success-answer {
+    color: green; /* Màu chữ đỏ */
+}
+

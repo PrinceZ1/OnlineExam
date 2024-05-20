@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- {% load static %} -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tạo sửa kỳ thi</title>
+  <link rel="stylesheet" href="../css/TaoKyThi.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+
+</head>
+
+<body>
+
+  <input type="checkbox" id="check">
+  <!--header area start-->
+  <header>
+    <label for="check">
+      <i style="left: 200px;margin-top: 5px;"class="fas fa-bars" id="sidebar_btn"></i>
+    </label>
+    <div class="left_area">
+      <h3>ADMIN</h3>
+    </div>
+    <div class="right_area">
+      <a href="/index.html" class="logout_btn">Đăng xuất</a>
+    </div>
+  </header>
+  <!--header area end-->
+  <!--sidebar start-->
+  <div class="sidebar">
+    <a href="TrangDashBoard.html"><i class="fas fa-columns"></i><span>Trang chủ</span></a>
+    <a href="TrangTaoChinhSuaKyThi.html"><i class="fas fa-tachometer-alt"></i><span>Quản lý kỳ thi</span></a>
+    <a href="TrangKetQua.html"><i class="fas fa-book"></i><span>Kết quả thi </span></a>
+    <a href="TrangThongKe.html"><i class="fas fa-chart-pie"></i><span>Thống kê</span></a>
+    <a href="QuanLyTaiKhoan.html"><i class="fas fa-book"></i><span>Quản lý tài khoản</span></a>
+  </div>
+
+  <!--sidebar end-->
+
+
+  <!--content start-->
+  <div class="content">
+    <br><br><br><br><br>
+    <!-- {% block content %}
+
+    {% endblock content %} -->
+
+    <div class="show_exam">
+      <table id="statistics">
+          <thead>
+              <tr>
+                  <th>STT</th> <!-- Số thứ tự(STT) -->
+                  <th>Tên kỳ thi</th>
+                  <th>Số lượng môn thi</th>
+                  <th>Tổng số bài thi</th> <!-- Thêm cột Loại kỳ thi -->
+                  <th>Số lượng bài mở</th> <!-- Thêm cột Trạng thái truy cập -->
+                  <th>Số lượng bài đóng</th> <!-- Thêm cột Ngày thi -->
+                  <th>Tổng số lần tham gia</th>
+              </tr>
+          </thead>
+          <tbody id="statsBody"></tbody>
+      </table>
+      
+    </div>
+
+    <button id="ThemKyThi" onclick="showForm()">Thêm kỳ thi</button>
+      <br><br>
+    <div id="formContainer" style="display: none;">
+        <form id="examForm">
+            <label for="examName">Tên kỳ thi:</label>
+            <input type="text" id="examName" name="examName" required>
+            
+            <label for="description">Mô tả:</label>
+            <input type="text" id="description" name="description">
+            
+            <label for="examType">Loại kỳ thi:</label>
+            <select id="examType" name="examType">
+                <option value="tự do">Tự do</option>
+                <option value="thời gian cụ thể">Thời gian cụ thể</option>
+            </select>
+            <br><br>
+            <label for="questions">Danh sách câu hỏi:</label>
+            <ul id="questions">
+                <!-- Danh sách câu hỏi sẽ được thêm bằng JavaScript -->
+            </ul>
+            
+            <button type="button" onclick="addQuestion()">Thêm câu hỏi</button>
+            <button type="button" onclick="importFromExcel()">Nhập từ Excel</button>
+            <button type="submit">Lưu</button>
+        </form>
+    </div>
+
+    <br><br><br>
+    <!-- {% include "quiz/footer.html" %} -->
+  </div>
+  <!--content end-->
+  <script src="../js/TaoKyThi.js"></script>
+</body>
+
+</html>

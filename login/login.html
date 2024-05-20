@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/login/login.css">
+</head>
+<body>
+    
+    <!-- Ảnh bên trái -->
+    <img src="/user/img/bg_left.png" alt="Left Image" class="left-image">
+
+    <!-- Ảnh bên phải -->
+    <img src="/user/img/bg_right.png" alt="Right Image" class="right-image">
+
+    <form onsubmit="return validateLogin()">
+        <div id="info-section">
+            <div class="login_logo">
+                <img class="img_logo" src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="logoptit">
+            </div>
+            <div class="login_title">
+                <h4 class="login_title--text-top">Đăng nhập</h4>
+                <h3 class="login_title--text-bot">
+                    <b>Tài khoản</b>
+                </h3>
+            </div>
+            <label for="name">Tên tài khoản</label>
+            <input type="text"  id="username" class="form-control form-control-lg name" name="username"><br>
+            <label for="password">Mật khẩu</label><br>
+            <div class="input-group pass">
+                <input type="password" id="password" class="form-control form-control-lg" name="password"/>
+            </div>
+            <div class="login_bottom_section">
+                <div class="login_checkbox">
+                    <input type="checkbox" value="1" name="remember" id="login_checkbox">
+                    <label for="name_checkbox" class="name_checkbox">
+                        Ghi nhớ
+                    </label>
+                </div>
+                <a class="login_fogot-password" href="#">Quên mật khẩu?</a>
+            </div>
+            <button class="login-click" onclick="validateLogin()">Đăng nhập</button>
+        <p class="register-link">Chưa có tài khoản? <a href="/user/html/register.html">Đăng ký</a></p>
+
+        </div>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/login/login.js"></script>
+</body>
+</html>

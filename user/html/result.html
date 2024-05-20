@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết quả</title>
+    <link rel="stylesheet" href="../css/result.css">
+</head>
+<body>
+    <header>
+        <h1>Trắc nghiệm onlile PTIT</h1>
+    </header>
+    
+    <nav>
+        <div>
+          <button onclick="goHome()">Trang chủ</button>
+          <!-- <button onclick="goexamdone()">Bài thi đã làm </button> -->
+        </div>
+        <button onclick="logout()">Đăng xuất</button>
+    </nav>
+    
+    <div id="result-container">
+        <h1>Kết quả bài làm của bạn là: </h1>
+        <div id="result-summary">
+            
+            <p id="soCauDung"></span> </p>
+            <p id="tongSoCau"></p>
+            <p id="diem"></span></p>
+            <button id="view-result-detail-btn" onclick="viewResultDetails()">Xem kết quả chi tiết</button>
+        </div>
+
+        <div id="result-details">
+            <!-- Hiển thị kết quả ở đây -->
+        </div>
+    </div>
+    
+    <script src="../js/result.js"></script>
+</body>
+</html>

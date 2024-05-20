@@ -1,0 +1,132 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* Container */
+
+form{
+    border: rgb(219, 217, 217) solid 2px;
+    border-radius: 15px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    
+}
+
+/* Logo */
+.login_logo {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.login_logo img {
+    width: 80px;
+}
+
+/* Title */
+.login_title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login_title h3 {
+    margin-top: 0;
+}
+
+/* Form */
+#info-section {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px;
+    padding-top: 0px;
+    border-radius: 15px;
+    margin: 0px;
+    margin-top: 0px;
+    max-width: 400px;
+}
+
+#info-section h2 {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #e11111;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #d45757;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* Forgot password link */
+.login_fogot-password {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Images */
+.left-image,
+.right-image {
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+.left-image {
+    left: 0;
+    width: 50%;
+}
+
+.right-image {
+    right: 0;
+    width: 50%;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .left-image,
+    .right-image {
+        display: block;
+    }
+}

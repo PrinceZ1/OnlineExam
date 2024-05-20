@@ -1,0 +1,173 @@
+a:link {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+  position: fixed;
+  background: #AD171C;
+  padding: 20px;
+  width: 100%;
+  z-index: 1;
+}
+
+.left_area a {
+  color: #fff;
+  margin: 0px;
+  margin-left: 19px;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.left_area span {
+  color: #19B3D3;
+}
+
+.logout_btn {
+  padding: 5px;
+  background: #19B3D3;
+  text-decoration: none;
+  float: right;
+  margin-top: -30px;
+  margin-right: 40px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.5s;
+
+}
+
+.logout_btn:hover {
+  background: #0B87A6;
+}
+.ketqua {
+  margin: 78px auto;
+  position: fixed;
+  right: 0;
+  width: 100% ;
+  height: calc(100% - 110px);
+  overflow-y: auto;
+}
+.ketqua .center{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.border{
+  width: 500px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  border-radius: 10px;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.timkiem{
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.info{
+  padding:20px;
+}
+.info .masv{
+  margin-bottom: 20px;
+}
+#fullName{
+  height: 35px;
+}
+button{
+  height: 40px;
+  width: 80px;
+  background-color: #dd1319;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+}
+button:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#resultTable {
+  display: none;
+  margin: 30px  auto;
+  border-collapse: collapse;
+  width: 90%;
+  text-align: center;
+}
+
+#resultTable th,
+#result-Table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#resultTable th {
+  background-color: #f2f2f2;
+}
+#resultTable tr{
+  height: 60px;
+}
+#resultTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#resultTable tr:hover {
+  background-color: #ddd;
+}
+#exportBtn{
+  display: none;
+  margin: auto;
+}
+.hidden{
+display: none;
+}
+.block{
+display: flex;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

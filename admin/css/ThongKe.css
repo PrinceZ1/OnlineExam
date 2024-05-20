@@ -1,0 +1,137 @@
+/* styles.css */
+@import url(quanlydethi.css);
+.left_area a {
+    color: #fff;
+    margin: 0px;
+    margin-left: 19px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 900;
+  }
+.logout_btn {
+    padding: 5px;
+    background: #fff;
+    text-decoration: none;
+    float: right;
+    margin-top: -30px;
+    margin-right: 40px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #AD171C;
+    transition: 0.5s;
+  }
+
+  .logout_btn:hover {
+    background: #e9bf63;
+    transform: scale(1.1);
+  }
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 1000px; /* Điều chỉnh kích thước container */
+    margin: -50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #AD171C; /* Đỏ */
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.filters {
+    max-width: 50px;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+.filters label,
+.filters select,
+.export-buttons button {
+    margin-right: 10px;
+}
+.filters-select{
+    padding: 3px 3px 3px 15px;
+  border-radius: 5px; 
+  border: 2px solid #cccccc; 
+  background-color: rgba(144, 238, 144, 0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; 
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    word-wrap: break-word; /* Ngắt từ dài */
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+.export-buttons {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+button {
+    padding: 10px 20px; 
+    background-color: #AD171C; /* Đỏ */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #AD171C; /* Đỏ tối */
+}
+
+#index {
+    width: 50px; /* Độ rộng cố định của cột số thứ tự */
+}
+
+.stats-container {
+    overflow-x: auto; /* Kéo thanh cuộn ngang nếu danh sách dài */
+}
+
+/* Căn giữa nội dung của từng cột */
+th:nth-child(1),
+td:nth-child(1),
+th:nth-child(2),
+td:nth-child(2),
+th:nth-child(3),
+td:nth-child(3),
+th:nth-child(4),
+td:nth-child(4),
+th:nth-child(5),
+td:nth-child(5),
+th:nth-child(6),
+td:nth-child(6),
+th:nth-child(7), /* Thêm cột Loại kỳ thi */
+td:nth-child(7), /* Thêm cột Loại kỳ thi */
+th:nth-child(8), /* Thêm cột Trạng thái truy cập */
+td:nth-child(8), /* Thêm cột Trạng thái truy cập */
+th:nth-child(9), /* Thêm cột Ngày thi */
+td:nth-child(9) { /* Thêm cột Ngày thi */
+    text-align: center;
+}

@@ -1,0 +1,162 @@
+@import url(ThongKe.css);
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+/* CSS cho container của form thêm đề thi */
+.deThiFormContainer {
+  display: none; /* Ẩn form ban đầu */
+  width: 400px; /* Độ rộng của form */
+  margin: 0 auto; /* Căn giữa form theo chiều ngang */
+  padding: 20px; /* Khoảng cách lề bên trong form */
+  background-color: #f2f2f2; /* Màu nền của form */
+  border: 1px solid #ccc; /* Viền của form */
+  border-radius: 5px; /* Bo tròn viền của form */
+}
+
+/* CSS cho tiêu đề "Thêm đề thi mới" */
+.deThiFormContainer p {
+  font-size: 20px; /* Cỡ chữ của tiêu đề */
+  font-weight: bold; /* Độ đậm của tiêu đề */
+  margin-bottom: 15px; /* Khoảng cách giữa tiêu đề và nội dung phía dưới */
+}
+
+/* CSS cho các label trong form */
+.deThiFormContainer label {
+  display: block; /* Hiển thị label trên mỗi dòng */
+  margin-bottom: 5px; /* Khoảng cách giữa các label */
+}
+
+/* CSS cho các input và select trong form */
+.deThiFormContainer input[type="text"],
+.deThiFormContainer select {
+  width: calc(100% - 10px); /* Độ rộng của input/select, trừ đi khoảng cách lề */
+  padding: 5px; /* Khoảng cách lề bên trong input/select */
+  margin-bottom: 10px; /* Khoảng cách giữa các input/select */
+  border: 1px solid #ccc; /* Viền của input/select */
+  border-radius: 3px; /* Bo tròn viền của input/select */
+}
+
+/* CSS cho nút "Thêm" trong form */
+.deThiFormContainer button[type="submit"] {
+  width: 100%; /* Nút có độ rộng tối đa */
+  padding: 10px; /* Khoảng cách lề bên trong nút */
+  background-color: #AD171C; /* Màu nền của nút */
+  color: white; /* Màu chữ của nút */
+  border: none; /* Loại bỏ viền của nút */
+  border-radius: 3px; /* Bo tròn viền của nút */
+  cursor: pointer; /* Đổi con trỏ chuột khi di chuột qua nút */
+}
+
+/* CSS cho nút "Thêm" khi di chuột qua */
+.deThiFormContainer button[type="submit"]:hover {
+  background-color: #AD171C; /* Màu nền của nút khi di chuột qua */
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 25%; /* Thiết lập chiều rộng của modal-content */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Đảm bảo ô nhập có cùng chiều rộng và có viền */
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="password"],
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc; /* Màu và độ dày của viền */
+  border-radius: 5px; /* Bo góc của viền */
+}
+
+
+/* Căn giữa nút */
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+/* Hiệu ứng hover cho nút */
+.modal-content button:hover {
+  background-color: #ddd;
+}
+
+
+/* CSS cho các input và select trong form */
+.deThiFormContainer input[type="text"],
+.deThiFormContainer input[type="datetime-local"],
+.deThiFormContainer select {
+  width: 100%; /* Độ rộng của input/select là 100% */
+  padding: 5px; /* Khoảng cách lề bên trong input/select */
+  margin-bottom: 10px; /* Khoảng cách giữa các input/select */
+  border: 1px solid #ccc; /* Viền của input/select */
+  border-radius: 3px; /* Bo tròn viền của input/select */
+  box-sizing: border-box; /* Đảm bảo rằng padding và border không làm tăng kích thước của input/select */
+}

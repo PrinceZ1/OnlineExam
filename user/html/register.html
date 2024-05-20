@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    
+    <!-- Ảnh bên trái -->
+    <img src="../img/bg_left.png" alt="Left Image" class="left-image">
+
+    <!-- Ảnh bên phải -->
+    <img src="../img/bg_right.png" alt="Right Image" class="right-image">
+    
+    <form onsubmit="return validateRegister()">
+        <div id="info-section">
+            <div class="login_logo">
+                <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="logoptit">
+            </div>
+            <div class="login_title">
+                <!-- <h4 class="login_title--text-top">Đăng Ký</h4> -->
+                <h3 class="login_title--text-bot">
+                    <b>Đăng ký tài khoản</b>
+                </h3>
+            </div>
+            
+            <label for="username">Tên đăng nhập:</label><br>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="fullname">Họ và tên:</label><br>
+            <input type="text" id="fullname" name="fullname" required><br>
+
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <label for="confirm-password">Xác nhận mật khẩu:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required><br>
+            
+            <div class="btn-submit">
+                <button type="submit"><b>Đăng ký</b></button>
+            </div>
+            
+        
+        </div>
+        
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/register.js"></script>
+</body>
+</html>

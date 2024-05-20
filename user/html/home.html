@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Hệ thống thi trắc nghiệm</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-header">
+            <ul class="nav-list logo">
+                <li class="nav-item logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Logo_PTIT_University.png" alt="logo">
+                </li>
+            </ul>
+            <ul class="nav-list title">
+                <li class="nav-item title">
+                    <h1>Trắc nghiệm online PTIT</h1>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <nav class="nav-menu">
+                <ul class="nav-menu_list">
+                    <li class="nav-menu_item"><button class="nav-menu_item_button" onclick="goHome()">Trang chủ</button>
+                    </li>
+                    <!-- <li class="nav-menu_item"><button class="nav-menu_item_button" onclick="goexamdone()">bài thi đã
+                        làm</button>
+                    </li> -->
+                </ul>
+                <ul class="nav-menu_list">
+                    <li class="nav-menu_item"><button class="nav-menu_item_button" onclick="logout()">Đăng xuất</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="quiz-categories">
+            <h2 style="padding: 80px 30px 5px 50px;">Chọn chủ đề</h2>
+
+            <div class="filter-all">
+
+                <select class="filter-exam" id="optionKyThi">
+                    <option value="all">Kỳ thi</option>
+                </select>
+
+                <select class="filter-exam" id="optionMonThi">
+                    <option value="all">Môn thi</option>
+                </select>
+
+                <select class="filter-exam" id="status">
+                    <option value="all">Trạng thái</option>
+                    <option value="open">Mở</option>
+                    <option value="closed">Đóng</option>
+                </select>
+                <button onclick="filterExamsCombined()" class="btn btn-danger">
+                    <i class="fas fa-filter" style="color: white;"></i>
+                </button>
+            </div>
+        </section>
+
+        <section class="quiz-list">
+            <h2 style="padding: 50px 10px 0px 50px;">Trắc nghiệm nổi bật</h2>
+            <div id="examList" class="exam-list">
+            </div>
+
+            <!-- Thêm các trắc nghiệm nổi bật khác tại đây -->
+            <ul class="pagination" id="pagination">
+                <!-- Hiển thị phân trang-->
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy;2024 Học viện Công nghệ Bưu chính Viễn thông -
+            Design by N09</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="../js/home.js"></script>
+</body>
+
+</html>

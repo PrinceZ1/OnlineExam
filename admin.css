@@ -1,0 +1,96 @@
+.sidebar a.active {
+    font-weight: bold;
+    background: #fff;
+    color: #AD171C;
+  }
+  
+  
+  #formContainer button {
+    padding: 10px 20px;
+    background-color: #AD171C;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  .btn {
+    transition: 0.5s;
+  }
+  
+  .btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .table-stt {
+    width: 35px;
+  }
+  
+  .table-status {
+    width: 60px;
+  }
+  .table-chitiet{
+    width: 90px;
+  }
+  
+  .table-time {
+    width: 82px;
+  }
+  
+  .question {
+    width: 55px;
+    background-color: #AD171C;
+    color: white;
+  
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    /* Tính toán độ rộng cột dựa trên nội dung và chiều rộng đã đặt */
+  }
+  
+  table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    word-wrap: break-word;
+    /* Ngắt từ dài */
+  }
+  
+  
+  
+  table th {
+    background-color: #AD171C;
+    color: #fff;
+  }
+  
+  
+  /* Căn giữa nội dung của từng cột */
+  th:nth-child(1),
+  td:nth-child(1),
+  th:nth-child(2),
+  td:nth-child(2),
+  th:nth-child(3),
+  td:nth-child(3),
+  th:nth-child(4),
+  td:nth-child(4),
+  th:nth-child(5),
+  td:nth-child(5),
+  th:nth-child(6),
+  td:nth-child(6),
+  th:nth-child(7),
+  /* Thêm cột Loại kỳ thi */
+  td:nth-child(7),
+  /* Thêm cột Loại kỳ thi */
+  th:nth-child(8),
+  /* Thêm cột Trạng thái truy cập */
+  td:nth-child(8),
+  /* Thêm cột Trạng thái truy cập */
+  th:nth-child(9),
+  /* Thêm cột Ngày thi */
+  td:nth-child(9) {
+    /* Thêm cột Ngày thi */
+    text-align: center;
+  }

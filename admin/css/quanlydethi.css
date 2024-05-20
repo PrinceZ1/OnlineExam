@@ -1,0 +1,533 @@
+/* @import url(ThongKe.css); */
+body {
+  background-color: #F3F7F9;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+select {
+  height: 29px;
+}
+
+button {
+  background-color: #AD171C;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input, textarea {
+  height: 29px;
+  width: 300px;
+}
+
+textarea {
+  margin-bottom: -15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+  position: fixed;
+  background: #AD171C;
+  padding: 20px;
+  width: 100%;
+  z-index: 1;
+}
+
+.left_area h3 {
+  color: #fff;
+  margin: 0px;
+  margin-left: 19px;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.left_area span {
+  color: #19B3D3;
+}
+
+.logout_btn {
+  padding: 5px;
+  background: #fff;
+  text-decoration: none;
+  float: right;
+  /* height: 15px; */
+  margin-top: -30px;
+  margin-right: 40px;
+  border-radius: 2px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #AD171C;
+  transition: 0.5s;
+
+}
+
+.logout_btn:hover {
+  background: #e9bf63;
+  transform: scale(1.1);
+}
+
+.sidebar {
+  background: #AD171C;
+  margin-top: 40px;
+  padding-top: 30px;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  transition: 0.5s;
+  transition-property: left;
+}
+
+.sidebar .profile_image {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.sidebar h4 {
+  color: #ccc;
+  margin-top: 0;
+
+}
+
+.sidebar a {
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+
+}
+
+.sidebar a:hover {
+  background: #e9bf63;
+}
+
+.sidebar i {
+  padding-right: 10px;
+}
+
+label #sidebar_btn {
+  z-index: 1;
+  color: #fff;
+  position: fixed;
+  cursor: pointer;
+  left: 300px;
+  font-size: 20px;
+  margin: 5px 0;
+  transition: 0.5s;
+  transition-property: color;
+}
+
+label #sidebar_btn:hover {
+  color: #e9bf63;
+}
+
+#check:checked~.sidebar {
+  left: -190px;
+}
+
+#check:checked~.sidebar a span {
+  display: none;
+}
+
+#check:checked~.sidebar a {
+  font-size: 20px;
+  margin-left: 170px;
+  width: 80px;
+}
+
+.content {
+  margin-left: 350px;
+  margin-right: 80px;
+  background: #F3F7F9;
+  /* background: url(background.png) no-repeat; */
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: 0.5s;
+}
+
+#check:checked~.content {
+  margin-left: 60px;
+  padding-left: 60px;
+}
+
+#check {
+  display: none;
+}
+
+#ThemKyThi {
+  transition: 0.5s;
+}
+
+#ThemKyThi:hover {
+  transform: scale(1.1);
+}
+
+/* style.css */
+
+/* Phần form thêm câu hỏi */
+#formContainer {
+  display: none;
+  margin-bottom: 20px;
+}
+
+#formContainer button {
+  padding: 10px 20px;
+  background-color: #AD171C;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#questions {
+  list-style-type: none;
+  padding: 0;
+}
+
+#questions li {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+
+#questions select {
+  margin-top: 5px;
+}
+
+#questions button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #AD171C;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#questions button:first-child {
+  margin-right: 10px;
+  background-color: #AD171C;
+}
+
+#questions button:last-child {
+  background-color: #AD171C;
+}
+
+/* ----------------------------------------------------------- */
+
+#questionsDetail {
+  list-style-type: none;
+  padding: 0;
+}
+
+#questionsDetail li {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+
+
+#questionsDetail select {
+  margin-top: 5px;
+}
+
+#questionsDetail button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #AD171C;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#questionsDetail button:first-child {
+  margin-right: 10px;
+  background-color: #AD171C;
+}
+
+#questionsDetail button:last-child {
+  background-color: #AD171C;
+}
+
+
+/* ------------------------------------------------------------------- */
+
+/* CSS cho container của form thêm đề thi */
+.deThiFormContainer {
+  display: none;
+  /* Ẩn form ban đầu */
+  width: 400px;
+  /* Độ rộng của form */
+  margin: 0 auto;
+  /* Căn giữa form theo chiều ngang */
+  padding: 20px;
+  /* Khoảng cách lề bên trong form */
+  background-color: #f2f2f2;
+  /* Màu nền của form */
+  border: 1px solid #ccc;
+  /* Viền của form */
+  border-radius: 5px;
+  /* Bo tròn viền của form */
+}
+
+/* CSS cho tiêu đề "Thêm đề thi mới" */
+.deThiFormContainer p {
+  font-size: 20px;
+  /* Cỡ chữ của tiêu đề */
+  font-weight: bold;
+  /* Độ đậm của tiêu đề */
+  margin-bottom: 15px;
+  /* Khoảng cách giữa tiêu đề và nội dung phía dưới */
+}
+
+/* CSS cho các label trong form */
+.deThiFormContainer label {
+  display: block;
+  /* Hiển thị label trên mỗi dòng */
+  margin-bottom: 5px;
+  /* Khoảng cách giữa các label */
+}
+
+/* CSS cho các input và select trong form */
+.deThiFormContainer input[type="text"],
+.deThiFormContainer select {
+  width: calc(100% - 10px);
+  /* Độ rộng của input/select, trừ đi khoảng cách lề */
+  padding: 5px;
+  /* Khoảng cách lề bên trong input/select */
+  margin-bottom: 10px;
+  /* Khoảng cách giữa các input/select */
+  border: 1px solid #ccc;
+  /* Viền của input/select */
+  border-radius: 3px;
+  /* Bo tròn viền của input/select */
+}
+
+/* CSS cho nút "Thêm" trong form */
+.deThiFormContainer button[type="submit"] {
+  width: 100%;
+  /* Nút có độ rộng tối đa */
+  padding: 10px;
+  /* Khoảng cách lề bên trong nút */
+  background-color: #AD171C;
+  /* Màu nền của nút */
+  color: white;
+  /* Màu chữ của nút */
+  border: none;
+  /* Loại bỏ viền của nút */
+  border-radius: 3px;
+  /* Bo tròn viền của nút */
+  cursor: pointer;
+  /* Đổi con trỏ chuột khi di chuột qua nút */
+}
+
+/* CSS cho nút "Thêm" khi di chuột qua */
+.deThiFormContainer button[type="submit"]:hover {
+  background-color: #AD171C;
+  /* Màu nền của nút khi di chuột qua */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 25%;
+  /* Thiết lập chiều rộng của modal-content */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Đảm bảo ô nhập có cùng chiều rộng */
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+/* Căn giữa nút */
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+/* Hiệu ứng hover cho nút */
+.modal-content button:hover {
+  background-color: #ddd;
+}
+
+
+/* CSS cho các input và select trong form */
+.deThiFormContainer input[type="text"],
+.deThiFormContainer input[type="datetime-local"],
+.deThiFormContainer select {
+  width: 100%;
+  /* Độ rộng của input/select là 100% */
+  padding: 5px;
+  /* Khoảng cách lề bên trong input/select */
+  margin-bottom: 10px;
+  /* Khoảng cách giữa các input/select */
+  border: 1px solid #ccc;
+  /* Viền của input/select */
+  border-radius: 3px;
+  /* Bo tròn viền của input/select */
+  box-sizing: border-box;
+  /* Đảm bảo rằng padding và border không làm tăng kích thước của input/select */
+}
+
+.show {
+  margin-top: 0px;
+  width: 60%;
+  overflow: auto;
+}
+
+
+.cauHoiInDeThi {
+  width: 75%;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.textcauHoiInDeThi {
+  width: 95%;
+  margin-bottom: 10px;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.cauHoiInDeThi label {
+  font-weight: bold;
+}
+
+.cauHoiInDeThi select {
+  width: 20%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.cauHoiInDeThi .btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cauHoiInDeThi .btn:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style-type: none; /* Xóa dấu chấm của mỗi mục trong danh sách */
+  padding: 0; /* Xóa khoảng trắng giữa các mục trong danh sách */
+  margin: 0; /* Xóa khoảng trắng ở đầu trang và dưới trang */
+}
+
+.addCauHoi {
+  width: 70%;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.textAddCauHoi {
+  width: 95%;
+  margin-bottom: 5px;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.btn {
+ 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+#optionListDeThi{
+  padding: 3px 3px 3px 15px;
+  border-radius: 5px; /* Bo tròn góc nhiều hơn */
+  border: 2px solid #cccccc; /* Thêm viền với màu xám nhạt, bạn có thể thay đổi màu sắc */
+  background-color: rgba(144, 238, 144, 0.3); /* Bạn có thể điều chỉnh màu nền nếu muốn */
+}
+
+
+.DownAddCauHoi{
+  margin-right: 600px;
+}

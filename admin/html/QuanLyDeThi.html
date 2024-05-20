@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- {% load static %} -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tạo sửa kỳ thi</title>
+  <link rel="stylesheet" href="../css/quanlydethi.css">
+  <link rel="stylesheet" href="/admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+</head>
+
+<body>
+
+  <input type="checkbox" id="check">
+  <!--header area start-->
+  <header>
+    <label for="check">
+      <i style="left: 200px;margin-top: 5px;" class="fas fa-bars" id="sidebar_btn"></i>
+    </label>
+    <div class="left_area">
+      <h3>ADMIN</h3>
+    </div>
+    <div class="right_area">
+      <a href="/index.html" class="logout_btn">Đăng xuất</a>
+    </div>
+  </header>
+  <!--header area end-->
+  <!--sidebar start-->
+  <div class="sidebar">
+    <a href="TrangDashBoard.html"><i class="fa-solid fa-house-user"></i></i><span>Trang chủ</span></a>
+    <a href="QuanLyMonThi.html"><i class="fa-solid fa-list-check"></i></i><span>Quản lý Môn Thi</span></a>
+    <a href="QuanLyKyThi.html"><i class="fa-solid fa-list-check"></i></i><span>Quản lý Kỳ Thi</span></a>
+    <a href="QuanLyDeThi.html" class="active"><i class="fa-solid fa-list-check"></i></i><span>Quản lý Đề thi</span></a>
+    <a href="TrangKetQua.html"><i class="fas fa-book"></i><span>Kết quả thi </span></a>
+    <a href="TrangThongKe.html"><i class="fas fa-chart-pie"></i><span>Thống kê</span></a>
+    <a href="QuanLyTaiKhoan.html"><i class="fa-solid fa-users"></i></i><span>Quản lý tài khoản</span></a>
+    <a href="/user/html/home.html"><i class="fa-solid fa-eye"></i><span>Xem trang web</span></a>
+  </div>
+
+  <!--sidebar end-->
+
+
+  <!--content start-->
+  <div class="content">
+    <br><br><br><br><br>
+    <!-- {% block content %}
+
+    {% endblock content %} -->
+    <h1>DANH SÁCH ĐỀ THI</h1>
+    <br>
+    <button class="btn" id="themDeThi" onclick="showFormDeThi()">Thêm đề thi mới</button>
+    <div id="deThiFormContainer" style="display: none;" class="deThiFormContainer modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModalDeThiForm()">&times;</span>
+        <form id="deThiForm">
+          <h2>Thêm đề thi mới</h2>
+          <ul>
+            <li>
+              <label for="name">Tên đề thi:</label>
+              <input type="text" id="name" name="name" required>
+
+              <label for="examType">Môn thi:</label>
+              <select id="optionMonThi" name="examType">
+
+              </select>
+
+              <label for="examType">Kỳ thi:</label>
+              <select id="optionKyThi" name="examType">
+              </select>
+            </li>
+            <li>
+              <label for="name">Trạng thái:</label>
+              <select id="optionStatus" name="examType">
+                <option value="1">Mở</option>
+                <option value="0">Đóng</option>
+              </select>
+            </li>
+            <li>
+              <label for="name">Thời gian làm bài:</label>
+              <input type="text" id="timeExam" name="timeExam" placeholder="nhập số phút" required>
+            </li>
+            <li>
+              <label for="name">Ngày thi:</label>
+              <input type="datetime-local" id="dateExam" name="timeExam" required>
+            </li>
+          </ul>
+          <button class="btn" type="submit">Thêm</button>
+        </form>
+      </div>
+    </div>
+    <br><br>
+    <div id="show_exam" class="show_exam">
+      <table id="statistics">
+        <thead>
+          <tr>
+            <th class="table-stt">STT</th>
+            <th>Tên đề thi</th>
+            <th>Tên môn thi</th>
+            <th>Tên kỳ thi</th>
+            <th class="table-status">Trạng Thái</th>
+            <th class="table-status">Câu hỏi</th>
+            <th class="table-time">Thời gian làm bài</th>
+            <th>Lịch thi</th>
+            <th><i class="fa-solid fa-wrench"></i></th>
+          </tr>
+        </thead>
+        <tbody id="statsBody"></tbody>
+      </table>
+    </div>
+
+
+    <div id="editDeThi" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Sửa kỳ thi</h3>
+        <form id="updateDeThiForm">
+          <label for="oldtenKyThi">Tên kỳ thi:</label>
+          <input type="text" id="oldTenDeThi" name="tenKyThi" required><br><br>
+          <label for="oldtenKyThi">Trạng Thái</label>
+          <select id="oldTrangThai" name="examType">
+            <option value="1">Mở</option>
+            <option value="0">Đóng</option>
+          </select><br><br>
+          <label for="oldtenKyThi">Thời gian làm bài:</label>
+          <input type="text" id="oldThoiGianThi" name="tenKyThi" required><br><br>
+          <label for="oldtenKyThi">Ngày thi:</label><br>
+          <input type="datetime-local" id="oldLichThi" name="timeExam" required>
+          <button class="btn" id="saveChangesButton" onclick="saveChanges()">Lưu thay đổi</button>
+        </form>
+      </div>
+    </div>
+
+    <br><br>
+    <button class="btn" id="ThemThi" onclick="showForm()">Thêm câu hỏi vào đề thi</button>
+    
+    <br><br>
+    <div id="formContainer" style="display: none;">
+      <form id="addCauHoiForm">
+        <label for="inputOrSelect">Chọn đề thi:</label>
+        <select id="optionListDeThi" name="examType">
+
+        </select>
+        
+
+        <br><br>
+        
+        <label for="questions">Danh sách câu hỏi:</label>
+        
+        <ul id="questions">
+          <!-- Danh sách câu hỏi sẽ được thêm bằng JavaScript -->
+        </ul>
+
+        <button class="btn" type="button" onclick="addQuestion()">Thêm câu hỏi</button>
+        <button class="btn" type="button" onclick="importFromExcel()">Nhập từ Excel</button>
+        <button class="btn" type="submit">Lưu</button>
+        <button class="btn" onclick="closeAddCauHoiDeThi()">Hủy</button>
+      </form>
+    </div>
+
+    <div id="editCauHoiDeThi" style="display: none;" class="">
+      <div class="">
+        <span class="close" onclick="closeCauHoiDeThiModal()">&times;</span>
+        <h3>Chi tiết câu hỏi</h3>
+        <form id="updateCauHoiDeThiForm">
+          <ul id="questionsDetail" >
+          </ul>
+        </form>
+        <button class="btn" onclick="closeCauHoiDeThiModal()">Hủy</button>
+      </div>
+    </div>
+
+    <br><br><br>
+    <!-- {% include "quiz/footer.html" %} -->
+  </div>
+  <!--content end-->
+  <script src="../js/quanlydethi.js"></script>
+</body>
+
+</html>

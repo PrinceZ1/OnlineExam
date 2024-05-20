@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- {% load static %} -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chủ</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/DashBoard.css">
+  <link rel="stylesheet" href="/admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <input type="checkbox" id="check">
+  <header>
+    <label for="check">
+      <i style="left: 200px;margin-top: 5px;" class="fas fa-bars" id="sidebar_btn"></i>
+    </label>
+    <div class="left_area">
+      <h3>ADMIN</h3>
+    </div>
+    <div class="right_area">
+      <a href="/index.html" class="logout_btn">Đăng xuất</a>
+    </div>
+  </header>
+
+  <div class="sidebar">
+    <a href="TrangDashBoard.html" class="active"><i class="fa-solid fa-house-user"></i></i><span>Trang chủ</span></a>
+    <a href="QuanLyMonThi.html"><i class="fa-solid fa-list-check"></i></i><span>Quản lý Môn Thi</span></a>
+    <a href="QuanLyKyThi.html"><i class="fa-solid fa-list-check"></i></i><span>Quản lý Kỳ Thi</span></a>
+    <a href="QuanLyDeThi.html"><i class="fa-solid fa-list-check"></i></i><span>Quản lý Đề thi</span></a>
+    <a href="TrangKetQua.html"><i class="fas fa-book"></i><span>Kết quả thi </span></a>
+    <a href="TrangThongKe.html"><i class="fas fa-chart-pie"></i><span>Thống kê</span></a>
+    <a href="QuanLyTaiKhoan.html"><i class="fa-solid fa-users"></i></i><span>Quản lý tài khoản</span></a>
+    <a href="/user/html/home.html"><i class="fa-solid fa-eye"></i><span>Xem trang web</span></a>
+  </div>
+  <div class="content">
+    <div class="img-dashboard">
+      <img class="thongbao_img" src="https://eduon.edu.vn/wp-content/uploads/2022/12/buu-chinh-vien-thong_1.jpg" alt="">
+    </div>
+  </div>
+  <div class="sidebar-overlay"></div>
+</body>
+
+</html>

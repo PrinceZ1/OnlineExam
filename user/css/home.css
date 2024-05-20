@@ -1,0 +1,182 @@
+/* File: home.css */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    background-color: #f9f9f9;
+}
+footer {
+  background-color: #AD171C;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+header{
+  position: fixed;
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+/* CSS for Header */
+.nav-header{
+  min-height: 50px;
+  background-color: #ad171c;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.nav-list{
+  padding-left: 0;
+  margin: auto 16px;
+  
+}
+.nav-item{
+  color: white ;
+  list-style: none;
+  margin: 0 8px;
+  display: inline-block;
+}
+.logo{
+  margin-left: 0px;
+}
+.title{
+  margin-right: 250px;
+}
+.logo img{
+  background-color: #ffffff;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+
+/* --------------------------------------------------------------------------------------- */
+
+/* css cho menu */
+.nav-menu{
+  min-height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: solid 20px rgb(134, 125, 125) ;
+  
+}
+
+.nav-menu_list{
+  padding-left: 0;
+  margin: auto 16px;
+  
+  
+}
+.nav-menu_item{
+  color: #fff;
+  list-style: none;
+  margin: 0 8px;
+  display: inline-block;
+}
+.nav-menu_item_button{
+  background-color: #ad171c;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  
+}
+.nav-menu_item_button:hover{
+  background-color: #eb370a;
+  box-shadow: 0 8px 10px 0 rgba(228, 7, 7, 0.2);
+  transform: scale(1.05);
+}
+
+/* --------------------------------------------------------------------------------------- */
+.exam-list {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Chỉnh sửa justify-content thành center để căn giữa các card */
+}
+
+.cardd {
+  border: 2px solid #ad171c;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px; /* Thay margin-bottom bằng margin để tạo khoảng cách xung quanh card */
+  box-shadow: 0 4px 8px 0 rgba(216, 22, 22, 0.2);
+  transition: 0.3s;
+  width: 300px;
+}
+
+.cardd:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.img-quiz{
+  width: 100%;
+}
+
+.exam-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.button-start{
+  background-color: #ad171c;
+  color: #fff;
+  border-radius: 4px;
+  width: 50%;
+  padding: 5px;
+  margin: 10px;
+  margin-left: 70px;
+}
+.button-start:disabled {
+  /* CSS cho nút "Bắt đầu làm" khi đã vô hiệu hóa */
+  opacity: 0.5; /* Ví dụ: giảm độ mờ của nút */
+  cursor: not-allowed; /* Ví dụ: thay đổi con trỏ */
+}
+
+.quiz-categories{
+  padding-top: 150px;
+}
+.quiz-list{
+  padding-bottom: 200px;
+}
+
+/* -------------------------------------------- */
+
+.filter-custom{
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* -------------------------------------------- */
+.footer{
+  min-height: 50px;
+  background-color: #ad171c;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.filter-exam{
+  border-radius: 3px;
+  height: 100%;
+}
+
+.filter-all{
+  padding: 10px 30px 0px 50px;
+  height: 50px;
+}
+
+.btn-danger{
+  margin-bottom: 5px;
+}
+

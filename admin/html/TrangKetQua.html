@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kết quả</title>
+  <link rel="stylesheet" href="../css/KetQua.css">
+  <link rel="stylesheet" href="/admin.css">
+  <!-- Load Times New Roman font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arial">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<body>
+
+  <input type="checkbox" id="check">
+  <!--header area start-->
+  <header>
+    <label for="check">
+      <i style="left: 200px;margin-top: 5px;" class="fas fa-bars" id="sidebar_btn"></i>
+    </label>
+    <div class="left_area">
+      <h3>ADMIN</h3>
+    </div>
+    <div class="right_area">
+      <a href="/index.html" class="logout_btn">Đăng xuất</a>
+    </div>
+  </header>
+  <!--header area end-->
+  <!--sidebar start-->
+  <div class="sidebar">
+    <a href="TrangDashBoard.html"><i class="fa-solid fa-house-user"></i></i><span>Trang chủ</span></a>
+    <a href="QuanLyMonThi.html"><i class="fa-solid fa-list-check"></i></i><span>Quản lý Môn Thi</span></a>
+    <a href="QuanLyKyThi.html"><i class="fa-solid fa-list-check"></i></i><span>Quản lý Kỳ Thi</span></a>
+    <a href="QuanLyDeThi.html"><i class="fa-solid fa-list-check"></i></i><span>Quản lý Đề thi</span></a>
+    <a href="TrangKetQua.html" class="active"><i class="fas fa-book"></i><span>Kết quả thi </span></a>
+    <a href="TrangThongKe.html"><i class="fas fa-chart-pie"></i><span>Thống kê</span></a>
+    <a href="QuanLyTaiKhoan.html"><i class="fa-solid fa-users"></i></i><span>Quản lý tài khoản</span></a>
+    <a href="/user/html/home.html"><i class="fa-solid fa-eye"></i><span>Xem trang web</span></a>
+  </div>
+
+  <div class="content">
+    <br><br><br><br><br>
+    <!-- Tra cứu mã sinh viên -->
+    <div class="ketqua">
+      <div class="center">
+        <div class="border">
+          <div class="container">
+            <div class="timkiem"><h3>Tìm kiếm sinh viên</h3></div>
+            <div class="info">
+              <div class="masv">
+                <input class="userId" type="text" id="userId" placeholder="Mã sinh viên"><br>
+              </div>
+              <button class="btn tracuu" onclick="showResult()">Tra cứu</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Bảng hiển thị kết quả -->
+      <table id="resultTable">
+        <thead>
+          <tr>
+            <th class="table-stt">STT</th>
+            <th>Họ và tên</th>
+            <th>Tên đề thi</th>
+            <th>Thời gian nộp</th>
+            <th class="table-status">Điểm</th>
+            <th class="table-chitiet">Chi tiết</th>
+          </tr>
+        </thead>
+        <tbody id="resultBody">
+        </tbody>
+      </table>
+      <div><button class="btn" id="exportBtn" onclick="exportToPDF()">Xuất File</button></div>
+    </div>
+    <div id="detailModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Chi tiết câu hỏi và đáp án</h2>
+        <div id="questionDetail">
+          <!-- Nội dung câu hỏi và đáp án sẽ được thêm vào đây -->
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  
+  <script src="../js/KetQua.js"></script>
+
+
+</body>
+
+</html>

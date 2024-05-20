@@ -1,0 +1,228 @@
+body {
+  background-color: #F3F7F9;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+  position: fixed;
+  background: #AD171C;
+  padding: 20px;
+  width: 100%;
+  z-index: 1;
+}
+
+
+
+.left_area h3 {
+  color: #fff;
+  margin: 0px;
+  margin-left: 19px;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 900;
+  width: 100px;
+}
+
+.left_area span {
+  color: #19B3D3;
+}
+
+.logout_btn {
+  padding: 5px;
+  background: #fff;
+  text-decoration: none;
+  float: right;
+  margin-top: -30px;
+  margin-right: 40px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #AD171C;
+  transition: 0.5s;
+
+}
+
+.logout_btn:hover {
+  background: #eee452;
+  transform: scale(1.1);
+}
+
+.sidebar {
+  background: #AD171C;
+  margin-top: 40px;
+  padding-top: 30px;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  transition: 0.5s;
+  transition-property: left;
+}
+
+.sidebar .profile_image {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.sidebar h4 {
+  color: #ccc;
+  margin-top: 0;
+
+}
+
+.sidebar a {
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+
+}
+
+.sidebar a:hover {
+  background: #e9bf63;
+}
+
+.sidebar i {
+  padding-right: 10px;
+}
+
+label #sidebar_btn {
+  z-index: 9999;
+  color: #fff;
+  position: fixed;
+  cursor: pointer;
+  left: 300px;
+  font-size: 20px;
+  margin: 5px 0;
+  transition: 0.5s;
+  transition-property: color;
+}
+
+label #sidebar_btn:hover {
+  color: #e9bf63;
+}
+
+#check:checked~.sidebar {
+  left: -190px;
+}
+
+#check:checked~.sidebar a span {
+  display: none;
+}
+
+#check:checked~.sidebar a {
+  font-size: 20px;
+  margin-left: 170px;
+  width: 80px;
+  box-sizing: border-box;
+}
+
+.content {
+  margin-left: 250px;
+  margin-right: 0px;
+  background: url(background.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: 0.5s;
+}
+
+#check:checked~.content {
+  margin-left: 60px;
+}
+
+#check {
+  display: none;
+}
+
+/* -------------------------------------- */
+
+
+
+.thongbao_img {
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Màu đen với độ mờ là 50% */
+  z-index: 2;
+  /* Z-index thấp hơn sidebar để sidebar hiển thị trên lớp mờ */
+}
+
+@media (max-width: 740px) {
+  .sidebar {
+    display: none;
+
+  }
+
+  #check:checked~.sidebar {
+    display: block;
+    width: 250px;
+    position: fixed;
+    z-index: 10;
+    transition: left 0.3s ease;
+    left: 0;
+    height: auto;
+
+  }
+
+  #check:checked~.sidebar a {
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #check:checked~.sidebar a span {
+    display: block;
+  }
+  .left_area{
+    margin-left: -10px;
+    display: none;
+  }
+  label #sidebar_btn{
+    position:unset;
+  }
+
+  /* #check:checked ~ .sidebar-overlay {
+    display: block;
+  } */
+  .content {
+    margin-left: 0px;
+
+  }
+
+  #check:checked~.content {
+    margin-left: 0px;
+    z-index: 9;
+  }
+
+  .thongbao_img {
+    width: 100%;
+    height: auto;
+  }
+}

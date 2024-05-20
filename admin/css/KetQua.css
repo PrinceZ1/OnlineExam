@@ -1,0 +1,373 @@
+
+/* css của phần tạo kỳ thi */
+body{
+  background-color: #F3F7F9;
+}
+a:link {
+    text-decoration: none;
+  }
+  li{
+    margin-bottom: 15px;
+  }
+  select{
+    height: 29px;
+  }
+  button {
+      background-color: #AD171C;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+  input,textarea{
+    height: 29px;
+    width: 300px;
+  }
+  textarea{
+    margin-bottom: -15px;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  header {
+    position: fixed;
+    background: #AD171C;
+    padding: 20px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .left_area h3 {
+    color: #fff;
+    margin: 0px;
+    margin-left: 19px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .left_area span {
+    color: #19B3D3;
+  }
+
+  .logout_btn {
+    padding: 5px;
+    background: #fff;
+    text-decoration: none;
+    float: right;
+    /* height: 15px; */
+    margin-top: -30px;
+    margin-right: 40px;
+    border-radius: 2px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #AD171C;
+    transition: 0.5s;
+
+  }
+  .logout_btn:hover {
+    background: #e9bf63;
+    transform: scale(1.1);
+  }
+  .sidebar {
+    background: #AD171C;
+    margin-top: 40px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+  }
+
+  .sidebar .profile_image {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+  }
+
+  .sidebar h4 {
+    color: #ccc;
+    margin-top: 0;
+    
+  }
+
+  .sidebar a {
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+
+  }
+
+  .sidebar a:hover {
+    background: #e9bf63;
+  }
+
+  .sidebar i {
+    padding-right: 10px;
+  }
+
+  label #sidebar_btn {
+    z-index: 1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    left: 300px;
+    font-size: 20px;
+    margin: 5px 0;
+    transition: 0.5s;
+    transition-property: color;
+  }
+
+  label #sidebar_btn:hover {
+    color: #e9bf63;
+  }
+
+  #check:checked~.sidebar {
+    left: -190px;
+  }
+
+  #check:checked~.sidebar a span {
+    display: none;
+  }
+
+  #check:checked~.sidebar a {
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+  }
+
+  .content {
+    margin-left: 350px;
+    margin-right: 80px;
+    background: #F3F7F9;
+    /* background: url(background.png) no-repeat; */
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: 0.5s;
+  }
+
+  #check:checked~.content {
+    margin-left: 60px;
+    padding-left: 60px;
+  }
+
+  #check {
+    display: none;
+  }
+
+#ThemKyThi{
+  transition: 0.5s;
+}
+#ThemKyThi:hover{
+  transform: scale(1.1);
+}
+/* --------------------------------------- */
+@import url(ThongKe.css);
+
+a:link {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+  position: fixed;
+  background: #AD171C;
+  padding: 20px;
+  width: 100%;
+  z-index: 1;
+}
+
+.left_area a {
+  color: #fff;
+  margin: 0px;
+  margin-left: 19px;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.left_area span {
+  color: #e9bf63;
+}
+
+.logout_btn {
+  padding: 5px;
+  background: #fff;
+  text-decoration: none;
+  float: right;
+  margin-top: -30px;
+  margin-right: 40px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #AD171C;
+  transition: 0.5s;
+
+}
+
+.logout_btn:hover {
+  background: #e9bf63;
+  transform: scale(1.1);
+}
+.ketqua {
+  height: calc(100% - 110px);
+}
+.ketqua .center{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.border{
+  width: 500px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  border-radius: 10px;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.timkiem{
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.tracuu{
+  padding: 5px;
+}
+.info{
+  padding:20px;
+}
+.info .masv{
+  margin-bottom: 20px;
+}
+#fullName{
+  height: 35px;
+}
+button{
+  height: 40px;
+  width: 80px;
+  background-color: #dd1319;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+}
+button:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#resultTable {
+  display: none;
+  margin: 30px  auto;
+  border-collapse: collapse;
+  width: 90%;
+  text-align: center;
+}
+/* 
+#resultTable th,
+#resultTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#resultTable th {
+  background-color: #f2f2f2;
+}
+#resultTable tr{
+  height: 60px;
+}
+#resultTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#resultTable tr:hover {
+  background-color: #ddd;
+} */
+#exportBtn{
+  display: none;
+  margin: auto;
+}
+.hidden{
+display: none;
+}
+.block{
+display: flex;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.questionContent{
+  padding: 20px;
+  
+}
+.tracuu{
+  padding: auto;
+}
+.userId {
+  padding: 3px 3px 3px 15px;
+  border-radius: 5px; /* Bo tròn góc nhiều hơn */
+  border: 2px solid #cccccc; /* Thêm viền với màu xám nhạt, bạn có thể thay đổi màu sắc */
+  background-color: rgba(144, 238, 144, 0.3); /* Bạn có thể điều chỉnh màu nền nếu muốn */
+}
+.chitiet{
+  padding: 5px;
+}
+
+
+
+/* ------------------------------------ */

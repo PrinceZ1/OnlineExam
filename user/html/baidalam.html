@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch sử</title>
+    <link rel="stylesheet" href="../css/baidalam.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet"> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <header >
+        <div class="nav-header">
+            <ul class="nav-list logo">
+                <li class="nav-item logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Logo_PTIT_University.png" alt="logo">
+                </li>
+            </ul>
+            <ul class="nav-list title">
+                <li class="nav-item title">
+                    <h1>Trắc nghiệm online PTIT</h1>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <nav class="nav-menu">
+                <ul class="nav-menu_list">
+                  <li class="nav-menu_item"><button class="nav-menu_item_button" onclick="goHome()">Trang chủ</button></li>
+                  <!-- <li class="nav-menu_item"><button class="nav-menu_item_button" onclick="goexamdone()">bài thi đã làm</button></li> -->
+                </ul>
+                <ul class="nav-menu_list">
+                    <li class="nav-menu_item"><button class="nav-menu_item_button" onclick="logout()">Đăng xuất</button></li>
+                </ul>
+            </nav>    
+        </div>
+        
+    </header>
+    <main>
+        <br>
+        <div class="container">
+            
+            <div class="container_profile">
+                <div class="row profile">
+                    <div class="col-md-3">
+                        <div class="profile-sidebar">
+                            <div class="profile-userpic"> <img
+                                    src="https://hocwebgiare.com/thiet_ke_web_chuan_demo/bootstrap_user_profile/images/profile_user.jpg"
+                                    class="img-responsive" alt="Thông tin cá nhân">
+                            </div>
+                            <div class="profile-usertitle">
+                                <div class="profile-usertitle-name"> User </div>
+                            </div>
+                            <div class="profile-userbuttons">
+                                <button type="button" class="btn btn-success btn-sm">.</button>
+                                <button type="button" class="btn btn-danger btn-sm">.</button>
+                            </div>
+                            <div class="profile-usermenu">
+                                <ul class="nav">
+                                    <div class="logo_menuchinh"></div>
+                                       
+                                    <div class="menu-icon"><span>Menu</span></div>
+                                    
+                                    <li> 
+                                        <a href="#"> 
+                                            <i class="glyphicon glyphicon-pencil"></i> Luyện tập 
+                                        </a>
+                                    </li>
+                                    <li> 
+                                        <a href="#"> 
+                                            <i class="glyphicon glyphicon-time"></i> Giữa kỳ 
+                                        </a>
+                                    </li>
+                                    <li> 
+                                        <a href="#"> 
+                                            <i class="glyphicon glyphicon-ok"></i> Cuối kỳ 
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Các ví dụ tiếp theo có thể được thêm vào tương tự -->
+                    
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h1 class="text-center"><b>Lịch sử làm bài</b></h1>
+                <div class="profile-content">
+                    <h3>Bài làm số 1</h3>
+                    <p>Thời gian bắt đầu: 09:00:00</p>
+                    <p>Thời gian kết thúc: 09:30:00</p>
+                    <p>Thời gian làm bài: 30 phút</p>
+                    <p>Điểm số: 8.5/10</p>
+                    <p>Câu hỏi: 20 câu</p>
+                    <p>Kết quả: Đúng 17 câu, Sai 3 câu</p>
+                    <p>Xếp hạng:  5</p>
+                </div>
+                <div class="profile-content">
+                    <h3>Bài làm số 2</h3>
+                    <p>Thời gian bắt đầu: 14:00:00</p>
+                    <p>Thời gian kết thúc: 14:45:00</p>
+                    <p>Thời gian làm bài: 45 phút</p>
+                    <p>Điểm số: 9.5/10</p>
+                    <p>Câu hỏi: 20 câu</p>
+                    <p>Kết quả: Đúng 19 câu, Sai 1 câu</p>
+                    <p>Xếp hạng:  2</p>
+                </div>
+                <div class="profile-content">
+                    <h3>Bài làm số 3</h3>
+                    <p>Thời gian bắt đầu: 11:30:00</p>
+                    <p>Thời gian kết thúc: 12:15:00</p>
+                    <p>Thời gian làm bài: 45 phút</p>
+                    <p>Điểm số: 7.5/10</p>
+                    <p>Câu hỏi: 20 câu</p>
+                    <p>Kết quả: Đúng 15 câu, Sai 5 câu</p>
+                    <p>Xếp hạng: 8</p>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+    </main>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="../js/baidalam.js"></script>
+</body>
+
+</html>
